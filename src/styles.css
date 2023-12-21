@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&family=Kanit:wght@400;500&family=Pixelify+Sans&display=swap');
+body {
+    font-family: 'Pixelify Sans', sans-serif;
+}

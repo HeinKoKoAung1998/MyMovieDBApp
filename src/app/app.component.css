@@ -1,0 +1,13 @@
+.navbar .navbar-brand {
+   color: #ffff;
+   font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link
+{
+    color: #ffff;
+
+}
+body {
+    font-family: 'Pixelify Sans', sans-serif;   
+}

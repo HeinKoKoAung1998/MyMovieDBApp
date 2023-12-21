@@ -1,0 +1,84 @@
+
+
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000"  *ngFor="let pmovie of movieListPopular;let i= index"
+            [ngClass]="{active: i==0}">
+                <img [src]="'http://image.tmdb.org/t/p/original/' + pmovie.backdrop_path" class="d-block w-100"
+                    alt="..." [routerLink]="[pmovie.id]">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>{{ pmovie.original_title }}</h2>
+                    <p>{{ pmovie.overview }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+    <!--nav end-->
+
+    <div class="container-fluid mt-4 ">
+
+        <div class="row">
+            <h5 class="text-white">Trending Movies</h5>
+            <div class="rowposter  p-2" >
+                <ng-container *ngFor="let tmovie of movieListPopular">
+                    <img [src]="'http://image.tmdb.org/t/p/original/' + tmovie.poster_path" class="rowing largeposter"
+                    [routerLink]="[tmovie.id]">
+                </ng-container>
+                
+            </div>            
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4 ">
+
+        <div class="row">
+            <h5 class="text-white">Now Playing Movies</h5>
+            <div class="rowposter  p-2" >
+                <ng-container *ngFor="let npmovie of movieListNowPlaying">
+                    <img [src]="'http://image.tmdb.org/t/p/original/' + npmovie.poster_path" class="rowing largeposter"
+                    [routerLink]="[npmovie.id]">
+                </ng-container>
+                
+            </div>            
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4 ">
+
+        <div class="row">
+            <h5 class="text-white">Top Rated Movies</h5>
+            <div class="rowposter  p-2" >
+                <ng-container *ngFor="let npmovie of movieListTopRated">
+                    <img [src]="'http://image.tmdb.org/t/p/original/' + npmovie.poster_path" class="rowing largeposter"
+                    [routerLink]="[npmovie.id]">
+                </ng-container>
+                
+            </div>            
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4 ">
+
+        <div class="row">
+            <h5 class="text-white">Upcoming Movies</h5>
+            <div class="rowposter  p-2" >
+                <ng-container *ngFor="let npmovie of movieListUpcoming">
+                    <img [src]="'http://image.tmdb.org/t/p/original/' + npmovie.poster_path" class="rowing largeposter"
+                    [routerLink]="[npmovie.id]">
+                </ng-container>
+                
+            </div>            
+        </div>
+    </div>
+
